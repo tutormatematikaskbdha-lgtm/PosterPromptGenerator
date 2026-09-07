@@ -4,926 +4,1573 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Generator Prompt Poster Islami</title>
+<title>Generator Prompt Poster Pondok DHA</title>
 
 <style>
-:root {
-    --green-dark: #174d32;
-    --green: #23734b;
-    --green-light: #dfeee4;
-    --gold: #d9a928;
-    --gold-light: #f4df9b;
-    --cream: #fffaf0;
-    --blue: #dceff8;
-    --white: #ffffff;
-    --text: #26332b;
-    --border: #d9e3dc;
+
+:root{
+    --green:#075B3A;
+    --green2:#0B6B45;
+    --green3:#16804F;
+    --gold:#D99A16;
+    --gold2:#F2B632;
+    --cream:#FFF8E8;
+    --cream2:#F7EFD8;
+    --white:#FFFDF5;
+    --dark:#18362A;
+    --muted:#68786F;
+    --border:#D9CBA9;
+    --shadow:0 15px 40px rgba(7,91,58,.14);
 }
 
-* {
-    box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: var(--text);
+body{
+    margin:0;
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    color:var(--dark);
 
     background:
-        linear-gradient(
-            135deg,
-            #edf8f1 0%,
-            #fffaf0 50%,
-            #e5f3fa 100%
-        );
+    radial-gradient(
+        circle at 10% 0%,
+        rgba(242,182,50,.20),
+        transparent 28%
+    ),
 
-    min-height: 100vh;
+    radial-gradient(
+        circle at 90% 10%,
+        rgba(22,128,79,.16),
+        transparent 25%
+    ),
+
+    linear-gradient(
+        135deg,
+        #F7FFF9,
+        #FFFBF0 55%,
+        #EEF8F1
+    );
 }
 
-/* HEADER */
 
-.header {
+/* =========================
+   HEADER
+========================= */
+
+header{
+
     background:
-        linear-gradient(
-            135deg,
-            var(--green-dark),
-            var(--green)
-        );
+    linear-gradient(
+        135deg,
+        var(--green),
+        var(--green2)
+    );
 
-    color: white;
-    padding: 28px 20px;
-    text-align: center;
+    color:white;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,.12);
-}
-
-.header h1 {
-    margin: 0;
-    font-size: 30px;
-}
-
-.header p {
-    margin: 8px 0 0;
-    opacity: .9;
-}
-
-/* CONTAINER */
-
-.container {
-    width: min(1200px, 94%);
-    margin: 30px auto;
-}
-
-/* GRID */
-
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-}
-
-/* CARD */
-
-.card {
-    background: rgba(255,255,255,.96);
-    border-radius: 18px;
-    padding: 24px;
-
-    border: 1px solid var(--border);
+    padding:
+    30px 20px 35px;
 
     box-shadow:
-        0 10px 30px rgba(20,60,40,.10);
+    0 8px 30px rgba(0,0,0,.15);
 }
 
-.card h2 {
-    margin-top: 0;
-    color: var(--green-dark);
-    font-size: 21px;
+.header-inner{
 
-    border-bottom: 2px solid var(--gold-light);
-    padding-bottom: 10px;
+    max-width:1200px;
+
+    margin:auto;
 }
 
-/* FORM */
+.badge{
 
-label {
-    display: block;
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 7px;
+    display:inline-block;
+
+    background:
+    rgba(255,255,255,.14);
+
+    border:
+    1px solid rgba(255,255,255,.3);
+
+    padding:
+    8px 14px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    font-weight:bold;
+
+    letter-spacing:.5px;
+}
+
+header h1{
+
+    margin:
+    14px 0 8px;
+
+    font-size:
+    clamp(30px,5vw,50px);
+
+    line-height:1.05;
+}
+
+header p{
+
+    margin:0;
+
+    max-width:800px;
+
+    opacity:.9;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container{
+
+    max-width:1200px;
+
+    margin:
+    30px auto 60px;
+
+    padding:
+    0 16px;
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:22px;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+
+    background:
+    rgba(255,253,245,.96);
+
+    border:
+    1px solid rgba(7,91,58,.12);
+
+    border-radius:22px;
+
+    padding:22px;
+
+    box-shadow:
+    var(--shadow);
+}
+
+.card h2{
+
+    margin:
+    0 0 5px;
+
+    color:
+    var(--green);
+
+    font-size:22px;
+}
+
+.desc{
+
+    margin:
+    0 0 20px;
+
+    color:
+    var(--muted);
+
+    font-size:13px;
+
+    line-height:1.5;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.form-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    1fr 1fr;
+
+    gap:14px;
+}
+
+.field.full{
+
+    grid-column:
+    1 / -1;
+}
+
+label{
+
+    display:block;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-bottom:7px;
+
+    color:
+    var(--green);
 }
 
 input,
-textarea,
-select {
-    width: 100%;
+textarea{
 
-    border: 1px solid #ccd9d0;
+    width:100%;
 
-    border-radius: 10px;
+    border:
+    1.5px solid var(--border);
 
-    padding: 12px;
+    border-radius:13px;
 
-    font-size: 14px;
+    padding:
+    12px 13px;
 
-    background: #fff;
+    background:white;
 
-    outline: none;
+    color:var(--dark);
 
-    transition: .2s;
+    font-family:inherit;
+
+    font-size:14px;
+
+    outline:none;
+
+    transition:.2s;
 }
 
 input:focus,
-textarea:focus,
-select:focus {
-    border-color: var(--green);
+textarea:focus{
+
+    border-color:
+    var(--green2);
 
     box-shadow:
-        0 0 0 3px rgba(35,115,75,.12);
+    0 0 0 4px
+    rgba(22,128,79,.10);
 }
 
-textarea {
-    min-height: 110px;
-    resize: vertical;
+textarea{
+
+    min-height:110px;
+
+    resize:vertical;
+
+    line-height:1.5;
 }
 
-/* BUTTON */
 
-.buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 22px;
+/* =========================
+   BUTTON
+========================= */
+
+.actions{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:20px;
 }
 
-button {
-    border: none;
-    border-radius: 10px;
+button{
 
-    padding: 12px 18px;
+    border:0;
 
-    font-size: 14px;
-    font-weight: bold;
+    border-radius:12px;
 
-    cursor: pointer;
+    padding:
+    12px 17px;
 
-    transition: .2s;
+    font-family:inherit;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.2s;
 }
 
-.btn-generate {
-    background: var(--green);
-    color: white;
+button:hover{
+
+    transform:
+    translateY(-2px);
 }
 
-.btn-copy {
-    background: var(--gold);
-    color: white;
-}
+.primary{
 
-.btn-reset {
-    background: #e9ece9;
-    color: #34433a;
-}
-
-button:hover {
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 5px 12px rgba(0,0,0,.12);
-}
-
-/* OUTPUT */
-
-.output {
-    min-height: 500px;
+    color:white;
 
     background:
-        #10271b;
+    linear-gradient(
+        135deg,
+        var(--green),
+        var(--green3)
+    );
+
+    box-shadow:
+    0 8px 18px
+    rgba(7,91,58,.2);
+}
+
+.secondary{
+
+    background:
+    var(--gold2);
 
     color:
-        #f3f7f3;
-
-    border-radius: 12px;
-
-    padding: 18px;
-
-    white-space: pre-wrap;
-
-    font-family:
-        Consolas,
-        "Courier New",
-        monospace;
-
-    font-size: 13px;
-
-    line-height: 1.6;
-
-    overflow: auto;
+    #3D2A05;
 }
 
-/* INFO */
-
-.info {
-    margin-top: 20px;
-
-    padding: 15px;
-
-    border-radius: 12px;
+.ghost{
 
     background:
-        linear-gradient(
-            135deg,
-            var(--green-light),
-            var(--blue)
-        );
+    #EDF5EF;
 
-    font-size: 13px;
-
-    line-height: 1.6;
+    color:
+    var(--green);
 }
 
-/* FOOTER */
 
-.footer {
-    text-align: center;
+/* =========================
+   OUTPUT
+========================= */
 
-    padding: 25px;
+.output{
 
-    font-size: 13px;
+    min-height:620px;
 
-    color: #68766e;
+    padding:18px;
+
+    background:
+    #102D20;
+
+    color:
+    #EFFFF5;
+
+    border-radius:16px;
+
+    white-space:pre-wrap;
+
+    overflow:auto;
+
+    line-height:1.55;
+
+    font-family:
+    Consolas,
+    "Courier New",
+    monospace;
+
+    font-size:12px;
+
+    border:
+    1px solid
+    rgba(242,182,50,.35);
 }
 
-/* MOBILE */
+.status{
 
-@media(max-width: 800px) {
+    margin-top:10px;
 
-    .grid {
-        grid-template-columns: 1fr;
+    min-height:18px;
+
+    font-size:12px;
+
+    color:
+    var(--green);
+
+    font-weight:bold;
+}
+
+
+/* =========================
+   TIPS
+========================= */
+
+.tips{
+
+    margin-top:18px;
+
+    padding:15px;
+
+    border-radius:15px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #FFF7DC,
+        #F0F9F2
+    );
+
+    border:
+    1px solid #EAD79C;
+
+    font-size:12px;
+
+    line-height:1.6;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    color:
+    var(--muted);
+
+    font-size:12px;
+
+    padding:
+    0 15px 35px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+    .container{
+
+        grid-template-columns:
+        1fr;
     }
 
-    .header h1 {
-        font-size: 24px;
-    }
+    .output{
 
-    .container {
-        width: 94%;
+        min-height:500px;
     }
 }
+
+@media(max-width:600px){
+
+    .form-grid{
+
+        grid-template-columns:
+        1fr;
+    }
+
+    .field.full{
+
+        grid-column:auto;
+    }
+
+    .card{
+
+        padding:16px;
+
+        border-radius:18px;
+    }
+}
+
 </style>
 </head>
 
+
 <body>
 
-<header class="header">
 
-    <h1>🌿 Generator Prompt Poster Islami</h1>
+<header>
 
-    <p>
-        Bright Green • Gold • Cream • Blue • Islamic Poster 9:16
-    </p>
+<div class="header-inner">
+
+<span class="badge">
+🌿 GREEN • GOLD • CREAM • BLUE
+</span>
+
+<h1>
+Generator Prompt Poster
+</h1>
+
+<p>
+Generator prompt khusus poster Islamic 9:16
+dengan karakter visual cerah, hijau emerald,
+emas, cream dan langit biru seperti desain
+poster Pondok DHA.
+</p>
+
+</div>
 
 </header>
 
 
+
 <main class="container">
 
-<div class="grid">
 
-<!-- ========================= -->
-<!-- FORM -->
-<!-- ========================= -->
+<!-- =========================
+     FORM INPUT
+========================= -->
 
 <section class="card">
 
-<h2>📝 Materi Poster</h2>
+<h2>
+📝 Materi Poster
+</h2>
+
+<p class="desc">
+Isi materi tulisan di bawah.
+Layout, warna, komposisi dan gaya desain
+akan dibuat otomatis oleh generator.
+</p>
 
 
-<label>Judul Utama</label>
+<div class="form-grid">
+
+
+<!-- JUDUL -->
+
+<div class="field full">
+
+<label>
+Judul Utama
+</label>
 
 <input
-    id="judul"
-    placeholder="Contoh: DAMPAK MAKSIAT BAGI PRIBADI DAN MASYARAKAT"
->
+id="judul"
+placeholder="Contoh: HAKIKAT CINTA KEPADA SELAIN ALLAH">
+
+</div>
 
 
-<label>Sumber / Penulis</label>
+
+<!-- PENULIS -->
+
+<div class="field full">
+
+<label>
+Sumber / Penulis
+</label>
 
 <input
-    id="sumber"
-    placeholder="Contoh: At Tabii Bilal bin Sa’ad rahimahullah berkata"
->
+id="sumberPenulis"
+placeholder="Contoh: Ibnu Qoyyim Rahimahullah berkata">
+
+</div>
 
 
-<label>Isi Kutipan</label>
+
+<!-- KUTIPAN -->
+
+<div class="field full">
+
+<label>
+Isi Kutipan
+</label>
 
 <textarea
-    id="kutipan"
-    placeholder="Masukkan isi kutipan..."
-></textarea>
+id="kutipan"
+placeholder="Masukkan isi kutipan atau nasihat..."></textarea>
+
+</div>
 
 
-<label>Sumber Kitab / Referensi</label>
 
-<input
-    id="referensi"
-    placeholder="Contoh: Ibnul Mubarok dalam Az Zuhd-1333"
->
+<!-- KITAB -->
 
+<div class="field full">
 
-<label>Hari</label>
-
-<input
-    id="hari"
-    placeholder="Contoh: MINGGU"
->
-
-
-<label>Tanggal Hijriyah</label>
+<label>
+Sumber Kitab / Referensi
+</label>
 
 <input
-    id="hijriyah"
-    placeholder="Contoh: 01 Rabiut Tsani 1448 H"
->
+id="sumberKitab"
+placeholder="Contoh: Zadul Ma'ad: 2/24 || https://t.me/salafy_cirebon">
+
+</div>
 
 
-<label>Tanggal Masehi</label>
 
-<input
-    id="masehi"
-    placeholder="Contoh: 13 September 2026 M"
->
+<!-- HARI -->
 
+<div class="field">
 
-<label>Ajakan / CTA</label>
-
-<textarea
-    id="cta"
-    placeholder="Masukkan ajakan sedekah / informasi..."
-></textarea>
-
-
-<label>Nama Program</label>
+<label>
+Hari
+</label>
 
 <input
-    id="program"
-    placeholder="Contoh: RONGSOK BERKAH BERNILAI JARIYAH PONDOK DHA"
->
+id="hari"
+placeholder="Contoh: MINGGU">
+
+</div>
 
 
-<label>Nama Kontak</label>
+
+<!-- HIJRIYAH -->
+
+<div class="field">
+
+<label>
+Tanggal Hijriyah
+</label>
 
 <input
-    id="kontak"
-    placeholder="Contoh: Babe Hasan"
->
+id="tanggalHijri"
+placeholder="Contoh: 01 Rabiut Tsani 1448 H">
+
+</div>
 
 
-<label>No. HP</label>
+
+<!-- MASEHI -->
+
+<div class="field">
+
+<label>
+Tanggal Masehi
+</label>
 
 <input
-    id="hp"
-    placeholder="Contoh: 0852 1891 4533"
->
+id="tanggalMasehi"
+placeholder="Contoh: 13 September 2026 M">
+
+</div>
 
 
-<label>Gaya Warna</label>
 
-<select id="gaya">
+<!-- AJAKAN -->
 
-<option value="bright">
-BRIGHT GREEN + GOLD + CREAM + BLUE
-</option>
+<div class="field full">
 
-<option value="warm">
-WARM GOLDEN ISLAMIC
-</option>
+<label>
+Ajakan Sedekah
+</label>
 
-<option value="green">
-DEEP GREEN ISLAMIC
-</option>
+<textarea id="ajakan">
+Sedekah tidak mesti dengan Uang, Sampah Rongsokpun bila diniatkan ikhlas bisa jadi ladang Amal. Tim Rongsok siap menjemput ketempat Njenengan, Mari bersedekah Rongsok untuk membantu keuangan Pondok DHA, lingkungan bersih Pahala didapat
+</textarea>
 
-<option value="cream">
-ELEGANT CREAM + GOLD
-</option>
-
-</select>
+</div>
 
 
-<div class="buttons">
+
+<!-- PROGRAM -->
+
+<div class="field">
+
+<label>
+Nama Program
+</label>
+
+<input
+id="program"
+value="RONGSOK BERKAH BERNILAI JARIYAH PONDOK DHA">
+
+</div>
+
+
+
+<!-- KONTAK -->
+
+<div class="field">
+
+<label>
+Nama Kontak
+</label>
+
+<input
+id="namaKontak"
+value="Babe Hasan">
+
+</div>
+
+
+
+<!-- HP -->
+
+<div class="field">
+
+<label>
+No. HP
+</label>
+
+<input
+id="noHp"
+value="0852 1891 4533">
+
+</div>
+
+
+</div>
+
+
+
+<div class="actions">
 
 <button
-    class="btn-generate"
-    onclick="generatePrompt()"
->
+class="primary"
+onclick="generatePrompt()">
+
 ✨ Hasilkan Prompt
+
 </button>
 
 
 <button
-    class="btn-copy"
-    onclick="copyPrompt()"
->
+class="secondary"
+onclick="copyPrompt()">
+
 📋 Salin Prompt
+
 </button>
 
 
 <button
-    class="btn-reset"
-    onclick="resetForm()"
->
-🔄 Reset
+class="ghost"
+onclick="resetForm()">
+
+↺ Reset
+
 </button>
 
 </div>
 
-
-<div class="info">
-
-<b>💡 Cara menggunakan:</b><br>
-
-1. Isi materi poster di sebelah kiri.<br>
-2. Pilih gaya warna.<br>
-3. Klik <b>Hasilkan Prompt</b>.<br>
-4. Salin prompt dan gunakan pada AI image generator.
-
-</div>
-
-</section>
-
-
-<!-- ========================= -->
-<!-- HASIL PROMPT -->
-<!-- ========================= -->
-
-<section class="card">
-
-<h2>🎨 Hasil Prompt</h2>
 
 <div
-    id="output"
-    class="output"
->
-Prompt akan muncul di sini...
+id="status"
+class="status">
+</div>
+
+
+<div class="tips">
+
+<strong>💡 Tips:</strong>
+
+Upload gambar poster kiri sebagai
+<strong>reference image</strong>
+pada AI image generator.
+
+Template ini secara khusus mengarahkan AI
+untuk menggunakan karakter:
+
+<strong>
+BRIGHT GREEN + GOLD + CREAM + BLUE
+</strong>
+
+bukan poster gelap atau sepia.
+
 </div>
 
 </section>
 
+
+
+<!-- =========================
+     HASIL PROMPT
+========================= -->
+
+<section class="card">
+
+<h2>
+🚀 Hasil Prompt
+</h2>
+
+<p class="desc">
+
+Prompt siap disalin ke Gemini,
+Nano Banana atau AI image generator
+yang mendukung reference image.
+
+</p>
+
+
+<div
+id="output"
+class="output">
 </div>
+
+</section>
+
 
 </main>
 
 
-<footer class="footer">
 
-Generator Prompt Poster Islami • GitHub Pages
+<div class="footer">
 
-</footer>
+Generator Prompt Poster Pondok DHA
+•
+HTML + CSS + JavaScript
+•
+GitHub Pages
+
+</div>
+
 
 
 <script>
 
-function value(id) {
+
+/* =========================
+   HELPER
+========================= */
+
+function get(id){
 
     return document
-        .getElementById(id)
-        .value
-        .trim();
+    .getElementById(id)
+    .value
+    .trim();
 
 }
 
 
-function generatePrompt() {
 
-    const judul =
-        value("judul");
+/* =========================
+   GENERATE PROMPT
+========================= */
 
-    const sumber =
-        value("sumber");
+function generatePrompt(){
 
-    const kutipan =
-        value("kutipan");
 
-    const referensi =
-        value("referensi");
+const judul =
+get("judul") ||
+"[JUDUL UTAMA]";
 
-    const hari =
-        value("hari");
 
-    const hijriyah =
-        value("hijriyah");
+const sumberPenulis =
+get("sumberPenulis") ||
+"[SUMBER / PENULIS]";
 
-    const masehi =
-        value("masehi");
 
-    const cta =
-        value("cta");
+const kutipan =
+get("kutipan") ||
+"[ISI KUTIPAN]";
 
-    const program =
-        value("program");
 
-    const kontak =
-        value("kontak");
+const sumberKitab =
+get("sumberKitab") ||
+"[SUMBER KITAB / REFERENSI]";
 
-    const hp =
-        value("hp");
 
-    const gaya =
-        value("gaya");
+const hari =
+get("hari") ||
+"[HARI]";
 
 
-    let styleDescription = "";
+const hijri =
+get("tanggalHijri") ||
+"[TANGGAL HIJRIYAH]";
 
 
-    if (gaya === "bright") {
+const masehi =
+get("tanggalMasehi") ||
+"[TANGGAL MASEHI]";
 
-        styleDescription = `
-MAIN COLOR IDENTITY:
 
-BRIGHT GREEN + GOLD + CREAM + BLUE.
+const ajakan =
+get("ajakan") ||
+"[AJAKAN SEDEKAH]";
 
-Use a bright, fresh, vibrant and premium Islamic visual identity.
 
-Dominant colors:
-- vivid emerald green
-- fresh natural green
-- deep forest green
-- warm golden yellow
-- elegant cream
-- ivory
-- bright natural blue sky
+const program =
+get("program") ||
+"[NAMA PROGRAM]";
 
-The result MUST NOT look dark, muddy, brown, vintage or sepia.
 
-Avoid excessive orange.
+const kontak =
+get("namaKontak") ||
+"[NAMA KONTAK]";
 
-Avoid excessive yellow tint.
 
-Avoid brown dominant colors.
+const hp =
+get("noHp") ||
+"[NO. HP]";
 
-Avoid sepia filters.
 
-Keep the image bright, fresh, clean, energetic and modern.
-`;
 
-    }
+const prompt = `
 
-    else if (gaya === "warm") {
+Create a highly detailed Islamic poster design,
+vertical 9:16 aspect ratio,
+ultra realistic yet slightly stylized,
+premium modern Islamic poster,
+bright and vibrant visual style.
 
-        styleDescription = `
-MAIN COLOR IDENTITY:
+==================================================
+REFERENCE IMAGE
+==================================================
 
-Warm golden Islamic atmosphere.
+USE THE UPLOADED IMAGE AS THE MAIN VISUAL
+STYLE AND LAYOUT REFERENCE.
 
-Use:
-- warm gold
-- cream
-- beige
-- deep green
-- soft warm sunlight
+Maintain strong resemblance to the uploaded
+reference poster.
 
-Elegant and spiritual.
+Maintain:
 
-Do not make the image excessively dark.
-`;
+- overall layout
+- composition
+- panel arrangement
+- typography hierarchy
+- spacing
+- decorative ornaments
+- building position
+- visual hierarchy
 
-    }
+The final result must look like a
+BRIGHT GREEN + GOLD + CREAM + BLUE
+Islamic poster.
 
-    else if (gaya === "green") {
+DO NOT create a dark poster.
 
-        styleDescription = `
-MAIN COLOR IDENTITY:
+DO NOT create a vintage poster.
 
-Deep Islamic green.
+DO NOT create a brown poster.
 
-Use:
-- forest green
-- emerald green
-- cream
-- subtle gold
+DO NOT create a sepia poster.
 
-Premium Islamic visual identity.
-Clean and elegant.
-`;
+DO NOT apply excessive yellow color grading.
 
-    }
+==================================================
+BACKGROUND
+==================================================
 
-    else {
+Beautiful Indonesian tropical Islamic/pesantren
+environment.
 
-        styleDescription = `
-MAIN COLOR IDENTITY:
+Bright BLUE sky.
 
-Elegant cream and gold Islamic design.
+Soft natural white clouds.
 
-Use:
-- ivory
-- cream
-- soft beige
-- elegant gold
-- deep green accents
+Large lush green trees frame the upper left
+and upper right.
 
-Clean, luxurious and sophisticated.
-`;
+Warm golden sunlight shines through the leaves.
 
-    }
+Natural sunlight rays.
 
+Beautiful palm leaves.
 
-    const prompt = `
+At the bottom:
 
-CREATE A HIGHLY DETAILED ISLAMIC POSTER DESIGN.
+Traditional Indonesian pesantren building.
 
-VERTICAL 9:16 ASPECT RATIO.
+White classical pillars.
 
-ULTRA REALISTIC, PREMIUM, CLEAN, MODERN AND PROFESSIONAL ISLAMIC POSTER.
+Brown tiled roof.
 
-${styleDescription}
+Elegant traditional architecture.
 
+Green landscaping.
 
-BACKGROUND:
+Plants and flowers.
 
-Use the uploaded reference image as the primary visual reference.
+The pesantren building must remain clearly
+visible at the bottom.
 
-Create a beautiful Indonesian Islamic pesantren environment.
+DO NOT cover the building with text.
 
-Include:
+Atmosphere:
 
-- bright natural blue sky
-- lush green tropical trees
-- fresh green foliage
-- warm sunlight
-- subtle golden sun rays
-- beautiful natural atmosphere
-- traditional Indonesian pesantren architecture
-- white architectural elements
-- traditional tiled roof
-- natural greenery
+peaceful,
+spiritual,
+fresh,
+welcoming,
+optimistic,
+elegant.
 
-The background must feel bright, fresh, peaceful and attractive.
+==================================================
+COLOR STYLE
+==================================================
 
-Do not create a dull or empty background.
+PRIMARY COLORS:
 
+Deep Forest Green #075B3A
 
-IMPORTANT VISUAL DIRECTION:
+Dark Emerald Green #0B6B45
 
-The overall appearance should resemble a premium Indonesian Islamic social media poster.
+Fresh Emerald Green #16804F
 
-The composition must be visually balanced.
 
-Keep the pesantren building clearly visible.
+GOLD:
 
-Use layered cream/ivory information panels.
+Golden Yellow #F2B632
 
-Use deep green typography.
+Warm Gold #D99A16
 
-Use golden yellow highlights.
+Soft Golden Yellow #F6C95B
 
-Use subtle white outlines where necessary.
 
-Use elegant rounded panels.
+CREAM:
 
-Use soft realistic shadows.
+Ivory Cream #FFF8E8
 
-Use clean spacing.
+Soft Cream #F7EFD8
 
-Do not overcrowd the design.
+Warm White #FFFDF5
 
 
-MAIN TITLE:
+OUTLINE:
+
+Pure White #FFFFFF
+
+Deep Green #075B3A
+
+
+IMPORTANT:
+
+The sky MUST remain BLUE.
+
+The foliage MUST remain GREEN.
+
+The panels MUST remain LIGHT CREAM.
+
+Gold must be used mainly as an accent.
+
+DO NOT make the entire poster yellow.
+
+DO NOT use sepia.
+
+DO NOT use brown color grading.
+
+DO NOT use muddy green.
+
+==================================================
+FOREGROUND PANELS
+==================================================
+
+Use clean UI-style information panels.
+
+Rounded corners.
+
+Soft shadows.
+
+Thin golden borders.
+
+Subtle green outlines.
+
+Elegant spacing.
+
+Premium infographic appearance.
+
+==================================================
+TYPOGRAPHY
+==================================================
+
+Use typography similar to:
+
+Poppins ExtraBold,
+Baloo ExtraBold,
+Nunito ExtraBold.
+
+Major title:
+
+VERY BOLD.
+
+HIGHLY READABLE.
+
+Modern.
+
+Rounded.
+
+Slight 3D embossing.
+
+Dark green text.
+
+Thick white outline.
+
+Subtle dark green shadow.
+
+==================================================
+HEADER TITLE
+==================================================
+
+Text:
 
 "${judul}"
 
-Make the title highly prominent.
+Style:
 
-Use bold modern typography.
+VERY LARGE.
 
-Use deep forest green and golden yellow as the main title colors.
+UPPERCASE.
 
-Add a subtle thick white outline where appropriate.
+CENTERED.
 
-Make the title easy to read from a mobile phone.
+Dark forest green.
 
+Thick white outline.
 
-SOURCE / AUTHOR:
+Subtle green shadow.
 
-"${sumber}"
+Slight 3D effect.
 
-Place the source elegantly below or near the quotation.
+Golden accent.
 
+Decorative Islamic leaf ornaments
+on left and right.
 
-MAIN QUOTATION:
+==================================================
+SOURCE / AUTHOR
+==================================================
+
+Text:
+
+"${sumberPenulis}"
+
+Style:
+
+Dark emerald green capsule.
+
+Thin golden border.
+
+White text.
+
+Centered.
+
+Rounded pill.
+
+Soft shadow.
+
+==================================================
+QUOTE
+==================================================
+
+Text:
 
 "${kutipan}"
 
-Make the quotation highly readable.
+Place inside a large rounded
+ivory cream panel.
 
-Use a clean cream or ivory content panel.
+Panel:
 
-Maintain excellent typography hierarchy.
+Bright cream.
 
+Thin golden border.
 
-REFERENCE:
+Subtle green outline.
 
-"${referensi}"
+Soft shadow.
 
-Place the reference in a smaller but clearly readable typography.
+Typography:
 
+Dark forest green.
 
-DAY:
+Clean sans-serif.
+
+Medium to semi-bold.
+
+Highly readable.
+
+Centered.
+
+Balanced line spacing.
+
+Add large golden quotation marks.
+
+==================================================
+REFERENCE
+==================================================
+
+Text:
+
+"${sumberKitab}"
+
+Style:
+
+Small rounded pill.
+
+Dark emerald green.
+
+Thin golden border.
+
+White text.
+
+Small book icon.
+
+Centered.
+
+==================================================
+DAY
+==================================================
+
+Text:
 
 "${hari}"
 
-Make the day visually prominent.
+Style:
 
+VERY LARGE.
 
-DATE:
+BOLD.
 
-"${hijriyah} | ${masehi}"
+UPPERCASE.
 
-Use elegant Islamic calendar styling.
+Dark emerald green.
 
+Place mosque icon inside circular
+green badge on the left.
 
-CALL TO ACTION:
+White mosque silhouette.
 
-"${cta}"
+Golden outline.
 
-Make the CTA readable but secondary to the main title.
+==================================================
+DATE
+==================================================
 
+Hijri:
 
-PROGRAM:
+"${hijri}"
+
+Gregorian:
+
+"${masehi}"
+
+Use calendar icons.
+
+Dark green text.
+
+Medium-bold typography.
+
+Separate dates with a clean vertical divider.
+
+==================================================
+CALL TO ACTION
+==================================================
+
+Text:
+
+"${ajakan}"
+
+Style:
+
+Centered.
+
+Dark forest green.
+
+Clean sans-serif.
+
+Medium weight.
+
+Comfortable line spacing.
+
+Add green and golden leaf ornaments.
+
+==================================================
+MAIN CTA
+==================================================
+
+Text:
 
 "${program}"
 
-Make the program name visually attractive.
+Style:
 
-Use strong green/gold branding.
+Large rounded capsule.
 
+Dark emerald green background.
 
-CONTACT:
+Golden border.
 
-"${kontak}"
+White uppercase bold text.
 
-"${hp}"
+Subtle 3D depth.
 
-Place the contact information neatly at the bottom.
+Soft shadow.
 
+==================================================
+CONTACT
+==================================================
 
-COMPOSITION:
+Text:
 
-Create a professional vertical 9:16 composition.
+"${kontak} ${hp}"
 
-Use a clear hierarchy:
+Style:
 
-1. Main title
-2. Source
-3. Main quotation
-4. Reference
-5. Day and date
-6. CTA
-7. Program
-8. Contact
+Rounded pill.
 
-Use sufficient negative space.
+Ivory white background.
 
-Avoid overlapping text.
+Thin golden border.
 
-Avoid cutting text.
+Dark green typography.
 
-Avoid distorted letters.
+Circular user icon on the left.
 
-Avoid random typography.
+==================================================
+COMPOSITION
+==================================================
 
-All Indonesian text must be spelled correctly.
+Maintain this hierarchy:
 
+1. LARGE TITLE
+2. SOURCE LABEL
+3. LARGE QUOTE PANEL
+4. REFERENCE LABEL
+5. DAY / DATE PANEL
+6. CALL TO ACTION
+7. MAIN CTA BUTTON
+8. CONTACT
+9. PESANTREN BUILDING
 
-LIGHTING:
+Keep all elements inside safe margins.
+
+Do not overcrowd the design.
+
+Maintain strong visual balance.
+
+==================================================
+LIGHTING
+==================================================
 
 Bright natural daylight.
 
-Fresh green environment.
-
 Warm golden sunlight.
-
-Soft realistic shadows.
-
-Beautiful atmospheric depth.
 
 Natural highlights.
 
-Premium photography-like appearance.
+Soft shadows.
 
+Subtle cinematic glow.
 
-QUALITY:
+The sunlight must NOT turn the entire
+image yellow.
 
-Ultra detailed.
+The blue sky must remain blue.
 
-High resolution.
+==================================================
+QUALITY
+==================================================
 
-Sharp typography.
+Ultra high resolution.
+
+4K.
 
 Professional graphic design.
 
-Realistic architectural details.
+Extremely sharp details.
 
-Realistic vegetation.
+Realistic foliage.
 
-Beautiful natural lighting.
+Detailed architecture.
 
-Clean Islamic social media poster.
+Crisp typography.
 
-Mobile-friendly readability.
+High readability.
 
+Premium commercial poster.
 
-DO NOT:
+No blurry text.
 
-- use dark muddy colors
-- use dominant brown
-- use heavy sepia
-- use vintage filter
-- use excessive orange
-- make the background dull
-- make the poster overcrowded
-- distort Indonesian text
-- misspell the supplied text
-- change the supplied wording
-- add unnecessary quotations
-- add fake logos
-- add random people
-- add unrelated objects
+No distorted letters.
 
+No random symbols.
 
-FINAL OUTPUT:
+No unnecessary objects.
 
-Premium Indonesian Islamic poster.
+==================================================
+FINAL IMPORTANT INSTRUCTION
+==================================================
 
-Bright Green + Gold + Cream + Blue visual identity.
+The final appearance MUST resemble the
+BRIGHT FIRST REFERENCE IMAGE.
 
-Vertical 9:16.
+Target color identity:
+
+GREEN
++
+GOLD
++
+CREAM
++
+BLUE
+
+NOT:
+
+SEPPIA
+BROWN
+DARK GOLD
+OVERLY YELLOW
+
+Maintain the uploaded reference image
+as the primary visual reference.
+
+Keep layout and composition consistent.
+
+Only change the supplied textual content.
 
 --ar 9:16
-
 `;
 
 
-    document
-        .getElementById("output")
-        .textContent = prompt;
+
+document
+.getElementById("output")
+.textContent = prompt;
+
+
+document
+.getElementById("status")
+.textContent =
+"✓ Prompt berhasil dibuat.";
+
 
 }
 
 
-function copyPrompt() {
 
-    const text =
-        document
-        .getElementById("output")
-        .textContent;
+/* =========================
+   COPY
+========================= */
+
+async function copyPrompt(){
+
+    const output =
+    document.getElementById("output");
 
 
-    if (
-        !text ||
-        text === "Prompt akan muncul di sini..."
-    ) {
+    if(!output.textContent.trim()){
 
-        alert(
-            "Silakan hasilkan prompt terlebih dahulu."
-        );
-
-        return;
+        generatePrompt();
 
     }
 
 
-    navigator.clipboard
-        .writeText(text)
-        .then(() => {
+    try{
 
-            alert(
-                "✅ Prompt berhasil disalin!"
-            );
+        await navigator
+        .clipboard
+        .writeText(output.textContent);
 
-        });
-
-}
-
-
-function resetForm() {
-
-    document
-        .querySelectorAll(
-            "input, textarea"
-        )
-        .forEach(
-            element =>
-            element.value = ""
-        );
-
-
-    document
-        .getElementById("output")
+        document
+        .getElementById("status")
         .textContent =
-        "Prompt akan muncul di sini...";
+        "✓ Prompt berhasil disalin ke clipboard.";
+
+    }
+
+    catch(error){
+
+        const temp =
+        document.createElement("textarea");
+
+        temp.value =
+        output.textContent;
+
+        document
+        .body
+        .appendChild(temp);
+
+        temp.select();
+
+        document.execCommand("copy");
+
+        temp.remove();
+
+        document
+        .getElementById("status")
+        .textContent =
+        "✓ Prompt berhasil disalin.";
+
+    }
 
 }
+
+
+
+/* =========================
+   RESET
+========================= */
+
+function resetForm(){
+
+    document
+    .getElementById("judul")
+    .value = "";
+
+    document
+    .getElementById("sumberPenulis")
+    .value = "";
+
+    document
+    .getElementById("kutipan")
+    .value = "";
+
+    document
+    .getElementById("sumberKitab")
+    .value = "";
+
+    document
+    .getElementById("hari")
+    .value = "";
+
+    document
+    .getElementById("tanggalHijri")
+    .value = "";
+
+    document
+    .getElementById("tanggalMasehi")
+    .value = "";
+
+    document
+    .getElementById("ajakan")
+    .value =
+    "Sedekah tidak mesti dengan Uang, Sampah Rongsokpun bila diniatkan ikhlas bisa jadi ladang Amal. Tim Rongsok siap menjemput ketempat Njenengan, Mari bersedekah Rongsok untuk membantu keuangan Pondok DHA, lingkungan bersih Pahala didapat";
+
+    document
+    .getElementById("program")
+    .value =
+    "RONGSOK BERKAH BERNILAI JARIYAH PONDOK DHA";
+
+    document
+    .getElementById("namaKontak")
+    .value =
+    "Babe Hasan";
+
+    document
+    .getElementById("noHp")
+    .value =
+    "0852 1891 4533";
+
+    document
+    .getElementById("output")
+    .textContent = "";
+
+    document
+    .getElementById("status")
+    .textContent =
+    "Form telah direset.";
+
+}
+
+
+/* Jalankan otomatis */
+
+generatePrompt();
 
 </script>
 
