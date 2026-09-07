@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Generator Prompt Poster Islami</title>
+
+<style>
+:root {
+    --green-dark: #174d32;
+    --green: #23734b;
+    --green-light: #dfeee4;
+    --gold: #d9a928;
+    --gold-light: #f4df9b;
+    --cream: #fffaf0;
+    --blue: #dceff8;
+    --white: #ffffff;
+    --text: #26332b;
+    --border: #d9e3dc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+
+    background:
+        linear-gradient(
+            135deg,
+            #edf8f1 0%,
+            #fffaf0 50%,
+            #e5f3fa 100%
+        );
+
+    min-height: 100vh;
+}
+
+/* HEADER */
+
+.header {
+    background:
+        linear-gradient(
+            135deg,
+            var(--green-dark),
+            var(--green)
+        );
+
+    color: white;
+    padding: 28px 20px;
+    text-align: center;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.12);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.header p {
+    margin: 8px 0 0;
+    opacity: .9;
+}
+
+/* CONTAINER */
+
+.container {
+    width: min(1200px, 94%);
+    margin: 30px auto;
+}
+
+/* GRID */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+/* CARD */
+
+.card {
+    background: rgba(255,255,255,.96);
+    border-radius: 18px;
+    padding: 24px;
+
+    border: 1px solid var(--border);
+
+    box-shadow:
+        0 10px 30px rgba(20,60,40,.10);
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--green-dark);
+    font-size: 21px;
+
+    border-bottom: 2px solid var(--gold-light);
+    padding-bottom: 10px;
+}
+
+/* FORM */
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 7px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+
+    border: 1px solid #ccd9d0;
+
+    border-radius: 10px;
+
+    padding: 12px;
+
+    font-size: 14px;
+
+    background: #fff;
+
+    outline: none;
+
+    transition: .2s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--green);
+
+    box-shadow:
+        0 0 0 3px rgba(35,115,75,.12);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* BUTTON */
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 22px;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px 18px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.btn-generate {
+    background: var(--green);
+    color: white;
+}
+
+.btn-copy {
+    background: var(--gold);
+    color: white;
+}
+
+.btn-reset {
+    background: #e9ece9;
+    color: #34433a;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 5px 12px rgba(0,0,0,.12);
+}
+
+/* OUTPUT */
+
+.output {
+    min-height: 500px;
+
+    background:
+        #10271b;
+
+    color:
+        #f3f7f3;
+
+    border-radius: 12px;
+
+    padding: 18px;
+
+    white-space: pre-wrap;
+
+    font-family:
+        Consolas,
+        "Courier New",
+        monospace;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    overflow: auto;
+}
+
+/* INFO */
+
+.info {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--green-light),
+            var(--blue)
+        );
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+/* FOOTER */
+
+.footer {
+    text-align: center;
+
+    padding: 25px;
+
+    font-size: 13px;
+
+    color: #68766e;
+}
+
+/* MOBILE */
+
+@media(max-width: 800px) {
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header h1 {
+        font-size: 24px;
+    }
+
+    .container {
+        width: 94%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <h1>🌿 Generator Prompt Poster Islami</h1>
+
+    <p>
+        Bright Green • Gold • Cream • Blue • Islamic Poster 9:16
+    </p>
+
+</header>
+
+
+<main class="container">
+
+<div class="grid">
+
+<!-- ========================= -->
+<!-- FORM -->
+<!-- ========================= -->
+
+<section class="card">
+
+<h2>📝 Materi Poster</h2>
+
+
+<label>Judul Utama</label>
+
+<input
+    id="judul"
+    placeholder="Contoh: DAMPAK MAKSIAT BAGI PRIBADI DAN MASYARAKAT"
+>
+
+
+<label>Sumber / Penulis</label>
+
+<input
+    id="sumber"
+    placeholder="Contoh: At Tabii Bilal bin Sa’ad rahimahullah berkata"
+>
+
+
+<label>Isi Kutipan</label>
+
+<textarea
+    id="kutipan"
+    placeholder="Masukkan isi kutipan..."
+></textarea>
+
+
+<label>Sumber Kitab / Referensi</label>
+
+<input
+    id="referensi"
+    placeholder="Contoh: Ibnul Mubarok dalam Az Zuhd-1333"
+>
+
+
+<label>Hari</label>
+
+<input
+    id="hari"
+    placeholder="Contoh: MINGGU"
+>
+
+
+<label>Tanggal Hijriyah</label>
+
+<input
+    id="hijriyah"
+    placeholder="Contoh: 01 Rabiut Tsani 1448 H"
+>
+
+
+<label>Tanggal Masehi</label>
+
+<input
+    id="masehi"
+    placeholder="Contoh: 13 September 2026 M"
+>
+
+
+<label>Ajakan / CTA</label>
+
+<textarea
+    id="cta"
+    placeholder="Masukkan ajakan sedekah / informasi..."
+></textarea>
+
+
+<label>Nama Program</label>
+
+<input
+    id="program"
+    placeholder="Contoh: RONGSOK BERKAH BERNILAI JARIYAH PONDOK DHA"
+>
+
+
+<label>Nama Kontak</label>
+
+<input
+    id="kontak"
+    placeholder="Contoh: Babe Hasan"
+>
+
+
+<label>No. HP</label>
+
+<input
+    id="hp"
+    placeholder="Contoh: 0852 1891 4533"
+>
+
+
+<label>Gaya Warna</label>
+
+<select id="gaya">
+
+<option value="bright">
+BRIGHT GREEN + GOLD + CREAM + BLUE
+</option>
+
+<option value="warm">
+WARM GOLDEN ISLAMIC
+</option>
+
+<option value="green">
+DEEP GREEN ISLAMIC
+</option>
+
+<option value="cream">
+ELEGANT CREAM + GOLD
+</option>
+
+</select>
+
+
+<div class="buttons">
+
+<button
+    class="btn-generate"
+    onclick="generatePrompt()"
+>
+✨ Hasilkan Prompt
+</button>
+
+
+<button
+    class="btn-copy"
+    onclick="copyPrompt()"
+>
+📋 Salin Prompt
+</button>
+
+
+<button
+    class="btn-reset"
+    onclick="resetForm()"
+>
+🔄 Reset
+</button>
+
+</div>
+
+
+<div class="info">
+
+<b>💡 Cara menggunakan:</b><br>
+
+1. Isi materi poster di sebelah kiri.<br>
+2. Pilih gaya warna.<br>
+3. Klik <b>Hasilkan Prompt</b>.<br>
+4. Salin prompt dan gunakan pada AI image generator.
+
+</div>
+
+</section>
+
+
+<!-- ========================= -->
+<!-- HASIL PROMPT -->
+<!-- ========================= -->
+
+<section class="card">
+
+<h2>🎨 Hasil Prompt</h2>
+
+<div
+    id="output"
+    class="output"
+>
+Prompt akan muncul di sini...
+</div>
+
+</section>
+
+</div>
+
+</main>
+
+
+<footer class="footer">
+
+Generator Prompt Poster Islami • GitHub Pages
+
+</footer>
+
+
+<script>
+
+function value(id) {
+
+    return document
+        .getElementById(id)
+        .value
+        .trim();
+
+}
+
+
+function generatePrompt() {
+
+    const judul =
+        value("judul");
+
+    const sumber =
+        value("sumber");
+
+    const kutipan =
+        value("kutipan");
+
+    const referensi =
+        value("referensi");
+
+    const hari =
+        value("hari");
+
+    const hijriyah =
+        value("hijriyah");
+
+    const masehi =
+        value("masehi");
+
+    const cta =
+        value("cta");
+
+    const program =
+        value("program");
+
+    const kontak =
+        value("kontak");
+
+    const hp =
+        value("hp");
+
+    const gaya =
+        value("gaya");
+
+
+    let styleDescription = "";
+
+
+    if (gaya === "bright") {
+
+        styleDescription = `
+MAIN COLOR IDENTITY:
+
+BRIGHT GREEN + GOLD + CREAM + BLUE.
+
+Use a bright, fresh, vibrant and premium Islamic visual identity.
+
+Dominant colors:
+- vivid emerald green
+- fresh natural green
+- deep forest green
+- warm golden yellow
+- elegant cream
+- ivory
+- bright natural blue sky
+
+The result MUST NOT look dark, muddy, brown, vintage or sepia.
+
+Avoid excessive orange.
+
+Avoid excessive yellow tint.
+
+Avoid brown dominant colors.
+
+Avoid sepia filters.
+
+Keep the image bright, fresh, clean, energetic and modern.
+`;
+
+    }
+
+    else if (gaya === "warm") {
+
+        styleDescription = `
+MAIN COLOR IDENTITY:
+
+Warm golden Islamic atmosphere.
+
+Use:
+- warm gold
+- cream
+- beige
+- deep green
+- soft warm sunlight
+
+Elegant and spiritual.
+
+Do not make the image excessively dark.
+`;
+
+    }
+
+    else if (gaya === "green") {
+
+        styleDescription = `
+MAIN COLOR IDENTITY:
+
+Deep Islamic green.
+
+Use:
+- forest green
+- emerald green
+- cream
+- subtle gold
+
+Premium Islamic visual identity.
+Clean and elegant.
+`;
+
+    }
+
+    else {
+
+        styleDescription = `
+MAIN COLOR IDENTITY:
+
+Elegant cream and gold Islamic design.
+
+Use:
+- ivory
+- cream
+- soft beige
+- elegant gold
+- deep green accents
+
+Clean, luxurious and sophisticated.
+`;
+
+    }
+
+
+    const prompt = `
+
+CREATE A HIGHLY DETAILED ISLAMIC POSTER DESIGN.
+
+VERTICAL 9:16 ASPECT RATIO.
+
+ULTRA REALISTIC, PREMIUM, CLEAN, MODERN AND PROFESSIONAL ISLAMIC POSTER.
+
+${styleDescription}
+
+
+BACKGROUND:
+
+Use the uploaded reference image as the primary visual reference.
+
+Create a beautiful Indonesian Islamic pesantren environment.
+
+Include:
+
+- bright natural blue sky
+- lush green tropical trees
+- fresh green foliage
+- warm sunlight
+- subtle golden sun rays
+- beautiful natural atmosphere
+- traditional Indonesian pesantren architecture
+- white architectural elements
+- traditional tiled roof
+- natural greenery
+
+The background must feel bright, fresh, peaceful and attractive.
+
+Do not create a dull or empty background.
+
+
+IMPORTANT VISUAL DIRECTION:
+
+The overall appearance should resemble a premium Indonesian Islamic social media poster.
+
+The composition must be visually balanced.
+
+Keep the pesantren building clearly visible.
+
+Use layered cream/ivory information panels.
+
+Use deep green typography.
+
+Use golden yellow highlights.
+
+Use subtle white outlines where necessary.
+
+Use elegant rounded panels.
+
+Use soft realistic shadows.
+
+Use clean spacing.
+
+Do not overcrowd the design.
+
+
+MAIN TITLE:
+
+"${judul}"
+
+Make the title highly prominent.
+
+Use bold modern typography.
+
+Use deep forest green and golden yellow as the main title colors.
+
+Add a subtle thick white outline where appropriate.
+
+Make the title easy to read from a mobile phone.
+
+
+SOURCE / AUTHOR:
+
+"${sumber}"
+
+Place the source elegantly below or near the quotation.
+
+
+MAIN QUOTATION:
+
+"${kutipan}"
+
+Make the quotation highly readable.
+
+Use a clean cream or ivory content panel.
+
+Maintain excellent typography hierarchy.
+
+
+REFERENCE:
+
+"${referensi}"
+
+Place the reference in a smaller but clearly readable typography.
+
+
+DAY:
+
+"${hari}"
+
+Make the day visually prominent.
+
+
+DATE:
+
+"${hijriyah} | ${masehi}"
+
+Use elegant Islamic calendar styling.
+
+
+CALL TO ACTION:
+
+"${cta}"
+
+Make the CTA readable but secondary to the main title.
+
+
+PROGRAM:
+
+"${program}"
+
+Make the program name visually attractive.
+
+Use strong green/gold branding.
+
+
+CONTACT:
+
+"${kontak}"
+
+"${hp}"
+
+Place the contact information neatly at the bottom.
+
+
+COMPOSITION:
+
+Create a professional vertical 9:16 composition.
+
+Use a clear hierarchy:
+
+1. Main title
+2. Source
+3. Main quotation
+4. Reference
+5. Day and date
+6. CTA
+7. Program
+8. Contact
+
+Use sufficient negative space.
+
+Avoid overlapping text.
+
+Avoid cutting text.
+
+Avoid distorted letters.
+
+Avoid random typography.
+
+All Indonesian text must be spelled correctly.
+
+
+LIGHTING:
+
+Bright natural daylight.
+
+Fresh green environment.
+
+Warm golden sunlight.
+
+Soft realistic shadows.
+
+Beautiful atmospheric depth.
+
+Natural highlights.
+
+Premium photography-like appearance.
+
+
+QUALITY:
+
+Ultra detailed.
+
+High resolution.
+
+Sharp typography.
+
+Professional graphic design.
+
+Realistic architectural details.
+
+Realistic vegetation.
+
+Beautiful natural lighting.
+
+Clean Islamic social media poster.
+
+Mobile-friendly readability.
+
+
+DO NOT:
+
+- use dark muddy colors
+- use dominant brown
+- use heavy sepia
+- use vintage filter
+- use excessive orange
+- make the background dull
+- make the poster overcrowded
+- distort Indonesian text
+- misspell the supplied text
+- change the supplied wording
+- add unnecessary quotations
+- add fake logos
+- add random people
+- add unrelated objects
+
+
+FINAL OUTPUT:
+
+Premium Indonesian Islamic poster.
+
+Bright Green + Gold + Cream + Blue visual identity.
+
+Vertical 9:16.
+
+--ar 9:16
+
+`;
+
+
+    document
+        .getElementById("output")
+        .textContent = prompt;
+
+}
+
+
+function copyPrompt() {
+
+    const text =
+        document
+        .getElementById("output")
+        .textContent;
+
+
+    if (
+        !text ||
+        text === "Prompt akan muncul di sini..."
+    ) {
+
+        alert(
+            "Silakan hasilkan prompt terlebih dahulu."
+        );
+
+        return;
+
+    }
+
+
+    navigator.clipboard
+        .writeText(text)
+        .then(() => {
+
+            alert(
+                "✅ Prompt berhasil disalin!"
+            );
+
+        });
+
+}
+
+
+function resetForm() {
+
+    document
+        .querySelectorAll(
+            "input, textarea"
+        )
+        .forEach(
+            element =>
+            element.value = ""
+        );
+
+
+    document
+        .getElementById("output")
+        .textContent =
+        "Prompt akan muncul di sini...";
+
+}
+
+</script>
+
+</body>
+</html>
